@@ -1,0 +1,10 @@
+@use 'helpers/color' as *;
+@use 'helpers/variebles' as *;
+
+.sidebar {
+  box-shadow: $shadow;
+  max-width: 33.2rem;
+  padding: 2.4rem;
+  background-color: $bg-form;
+  border-radius: $border-radius;
+}

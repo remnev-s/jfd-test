@@ -1,0 +1,45 @@
+@use 'helpers/variebles' as *;
+@use 'helpers/mixin' as *;
+
+.form-product {
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    @include label-text();
+    margin-bottom: 0.4rem;
+  }
+
+  &__item {
+    @include form-text();
+    box-shadow: $input-shadow;
+    border-radius: $border-radius;
+    background: #fffefb;
+    border: none;
+    padding: 1rem 1.1rem 1.6rem;
+    margin-bottom: 1.6rem;
+
+    &_textarea {
+      min-height: 10.8rem;
+    }
+
+    // скрывает стрелки у поля number
+    &_price::-webkit-inner-spin-button,
+    ::-webkit-inner-spin-button {
+      display: none;
+    }
+  }
+  // скрывает стрелки у поля number в firefox
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+
+  &__button {
+    @include form-text();
+    border-radius: $border-radius;
+    border: none;
+    color: #b4b4b4;
+    min-height: 3.6rem;
+    cursor: pointer;
+  }
+}
