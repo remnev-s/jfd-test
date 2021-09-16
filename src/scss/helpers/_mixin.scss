@@ -12,3 +12,7 @@
   color: #49485e;
   letter-spacing: -0.02rem;
 }
+
+@mixin animation() {
+  transition: all 0.4s linear;
+}

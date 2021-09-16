@@ -1,9 +1,18 @@
 @use 'helpers/variebles' as *;
 @use 'helpers/mixin' as *;
+@use 'helpers/color' as *;
 
 .form-product {
+  position: sticky;
+  top: 2.4rem;
+
   display: flex;
   flex-direction: column;
+
+  padding: 2.4rem;
+  box-shadow: $shadow;
+  background-color: $bg-form;
+  border-radius: $border-radius;
 
   &__label {
     @include label-text();
@@ -15,11 +24,13 @@
     box-shadow: $input-shadow;
     border-radius: $border-radius;
     background: #fffefb;
+
     border: none;
     padding: 1rem 1.1rem 1.6rem;
     margin-bottom: 1.6rem;
+    outline: none;
 
-    &_textarea {
+    &_el_main-text {
       min-height: 10.8rem;
     }
 
@@ -38,7 +49,7 @@
     @include form-text();
     border-radius: $border-radius;
     border: none;
-    color: #b4b4b4;
+    background-color: #eeeeee;
     min-height: 3.6rem;
     cursor: pointer;
   }

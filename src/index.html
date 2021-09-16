@@ -11,22 +11,24 @@
     <title>Добавление товара</title>
   </head>
   <body class="root">
-
     <div class="page">
       <div class="products root__wrapper">
-
-      <div class="products-heading">
-            <h2 class="products-heading__title">Добавление товара </h2>
+        <div class="products-heading">
+          <h2 class="products-heading__title">Добавление товара</h2>
           <select name="products-heading__sort">
-              <option value="good">По умолчанию</option>
-              <option value="good">По убыванию</option>
-              <option value="good">По еще чему-то</option>
+            <option value="good">По умолчанию</option>
+            <option value="good">По убыванию</option>
+            <option value="good">По еще чему-то</option>
           </select>
         </div>
 
-        <div class="sidebar">
-          <form class="form-product" name="form">
-              <label for="name" class="form-product__label"> Наименование товара </label>
+        <!-- ФОРМА -->
+        <main class="content">
+          <div class="sidebar">
+            <form class="form-product" name="form">
+              <label for="name" class="form-product__label">
+                Наименование товара
+              </label>
 
               <input
                 class="form-product__item"
@@ -36,16 +38,18 @@
                 required
               />
 
-              <label for="main-text" class="form-product__label"> Описание товара </label>
+              <label for="main-text" class="form-product__label">
+                Описание товара
+              </label>
               <textarea
-                class="form-product__item form-product__item_textarea"
                 name="main-text"
                 placeholder="Введите описание товара"
-                required
-              >
-              </textarea>
+                class="form-product__item form-product__item_el_main-text"
+              ></textarea>
 
-              <label for="url" class="form-product__label"> Ссылка на изображение товара </label>
+              <label for="url" class="form-product__label">
+                Ссылка на изображение товара
+              </label>
               <input
                 class="form-product__item"
                 type="url"
@@ -53,7 +57,9 @@
                 placeholder="Введите ссылку"
               />
 
-              <label for="price" class="form-product__label"> Цена товара </label>
+              <label for="price" class="form-product__label">
+                Цена товара
+              </label>
               <input
                 class="form-product__item form-product__item_price"
                 type="number"
@@ -61,10 +67,224 @@
                 placeholder="Введите цену"
               />
 
-            <input type="submit" class="form-product__button"
-            value="Добавить товар" >
-        </div>
-
+              <input
+                type="submit"
+                class="form-product__button"
+                value="Добавить товар"
+              />
+            </form>
+          </div>
+          <!--  -->
+          <section class="elements">
+            <ul class="elements__list">
+              <!--  -->
+              <li class="elements__list-item">
+                <img
+                  src="./img/product-img.jpg"
+                  alt="фотоаппарат"
+                  class="elements__list-photo"
+                />
+                <button class="elements__button-delete" type="button"></button>
+                <div class="elements__description-wrapper">
+                  <h3 class="elements__title">Наименование товара</h3>
+                  <p class="elements__description">
+                    Довольно-таки интересное описание товара в несколько строк.
+                    Довольно-таки интересное описание товара в несколько строк
+                  </p>
+                  <p class="elements__price">10 000 руб.</p>
+                </div>
+              </li>
+              <!--  -->
+              <li class="elements__list-item">
+                <img
+                  src="./img/product-img.jpg"
+                  alt="фотоаппарат"
+                  class="elements__list-photo"
+                />
+                <button class="elements__button-delete" type="button"></button>
+                <div class="elements__description-wrapper">
+                  <h3 class="elements__title">Наименование товара</h3>
+                  <p class="elements__description">
+                    Довольно-таки интересное описание товара в несколько строк.
+                    Довольно-таки интересное описание товара в несколько строк
+                  </p>
+                  <p class="elements__price">10 000 руб.</p>
+                </div>
+              </li>
+              <!--  -->
+              <li class="elements__list-item">
+                <img
+                  src="./img/product-img.jpg"
+                  alt="фотоаппарат"
+                  class="elements__list-photo"
+                />
+                <button class="elements__button-delete" type="button"></button>
+                <div class="elements__description-wrapper">
+                  <h3 class="elements__title">Наименование товара</h3>
+                  <p class="elements__description">
+                    Довольно-таки интересное описание товара в несколько строк.
+                    Довольно-таки интересное описание товара в несколько строк
+                  </p>
+                  <p class="elements__price">10 000 руб.</p>
+                </div>
+              </li>
+              <!--  -->
+              <li class="elements__list-item">
+                <img
+                  src="./img/product-img.jpg"
+                  alt="фотоаппарат"
+                  class="elements__list-photo"
+                />
+                <button class="elements__button-delete" type="button"></button>
+                <div class="elements__description-wrapper">
+                  <h3 class="elements__title">Наименование товара</h3>
+                  <p class="elements__description">
+                    Довольно-таки интересное описание товара в несколько строк.
+                    Довольно-таки интересное описание товара в несколько строк
+                  </p>
+                  <p class="elements__price">10 000 руб.</p>
+                </div>
+              </li>
+              <!--  -->
+              <li class="elements__list-item">
+                <img
+                  src="./img/product-img.jpg"
+                  alt="фотоаппарат"
+                  class="elements__list-photo"
+                />
+                <button class="elements__button-delete" type="button"></button>
+                <div class="elements__description-wrapper">
+                  <h3 class="elements__title">Наименование товара</h3>
+                  <p class="elements__description">
+                    Довольно-таки интересное описание товара в несколько строк.
+                    Довольно-таки интересное описание товара в несколько строк
+                  </p>
+                  <p class="elements__price">10 000 руб.</p>
+                </div>
+              </li>
+              <!--  -->
+              <li class="elements__list-item">
+                <img
+                  src="./img/product-img.jpg"
+                  alt="фотоаппарат"
+                  class="elements__list-photo"
+                />
+                <button class="elements__button-delete" type="button"></button>
+                <div class="elements__description-wrapper">
+                  <h3 class="elements__title">Наименование товара</h3>
+                  <p class="elements__description">
+                    Довольно-таки интересное описание товара в несколько строк.
+                    Довольно-таки интересное описание товара в несколько строк
+                  </p>
+                  <p class="elements__price">10 000 руб.</p>
+                </div>
+              </li>
+              <!--  -->
+              <li class="elements__list-item">
+                <img
+                  src="./img/product-img.jpg"
+                  alt="фотоаппарат"
+                  class="elements__list-photo"
+                />
+                <button class="elements__button-delete" type="button"></button>
+                <div class="elements__description-wrapper">
+                  <h3 class="elements__title">Наименование товара</h3>
+                  <p class="elements__description">
+                    Довольно-таки интересное описание товара в несколько строк.
+                    Довольно-таки интересное описание товара в несколько строк
+                  </p>
+                  <p class="elements__price">10 000 руб.</p>
+                </div>
+              </li>
+              <!--  -->
+              <li class="elements__list-item">
+                <img
+                  src="./img/product-img.jpg"
+                  alt="фотоаппарат"
+                  class="elements__list-photo"
+                />
+                <button class="elements__button-delete" type="button"></button>
+                <div class="elements__description-wrapper">
+                  <h3 class="elements__title">Наименование товара</h3>
+                  <p class="elements__description">
+                    Довольно-таки интересное описание товара в несколько строк.
+                    Довольно-таки интересное описание товара в несколько строк
+                  </p>
+                  <p class="elements__price">10 000 руб.</p>
+                </div>
+              </li>
+              <!--  -->
+              <li class="elements__list-item">
+                <img
+                  src="./img/product-img.jpg"
+                  alt="фотоаппарат"
+                  class="elements__list-photo"
+                />
+                <button class="elements__button-delete" type="button"></button>
+                <div class="elements__description-wrapper">
+                  <h3 class="elements__title">Наименование товара</h3>
+                  <p class="elements__description">
+                    Довольно-таки интересное описание товара в несколько строк.
+                    Довольно-таки интересное описание товара в несколько строк
+                  </p>
+                  <p class="elements__price">10 000 руб.</p>
+                </div>
+              </li>
+              <!--  -->
+              <li class="elements__list-item">
+                <img
+                  src="./img/product-img.jpg"
+                  alt="фотоаппарат"
+                  class="elements__list-photo"
+                />
+                <button class="elements__button-delete" type="button"></button>
+                <div class="elements__description-wrapper">
+                  <h3 class="elements__title">Наименование товара</h3>
+                  <p class="elements__description">
+                    Довольно-таки интересное описание товара в несколько строк.
+                    Довольно-таки интересное описание товара в несколько строк
+                  </p>
+                  <p class="elements__price">10 000 руб.</p>
+                </div>
+              </li>
+              <!--  -->
+              <li class="elements__list-item">
+                <img
+                  src="./img/product-img.jpg"
+                  alt="фотоаппарат"
+                  class="elements__list-photo"
+                />
+                <button class="elements__button-delete" type="button"></button>
+                <div class="elements__description-wrapper">
+                  <h3 class="elements__title">Наименование товара</h3>
+                  <p class="elements__description">
+                    Довольно-таки интересное описание товара в несколько строк.
+                    Довольно-таки интересное описание товара в несколько строк
+                  </p>
+                  <p class="elements__price">10 000 руб.</p>
+                </div>
+              </li>
+              <!--  -->
+              <li class="elements__list-item">
+                <img
+                  src="./img/product-img.jpg"
+                  alt="фотоаппарат"
+                  class="elements__list-photo"
+                />
+                <button class="elements__button-delete" type="button"></button>
+                <div class="elements__description-wrapper">
+                  <h3 class="elements__title">Наименование товара</h3>
+                  <p class="elements__description">
+                    Довольно-таки интересное описание товара в несколько строк.
+                    Довольно-таки интересное описание товара в несколько строк
+                  </p>
+                  <p class="elements__price">10 000 руб.</p>
+                </div>
+              </li>
+              <!--  -->
+            </ul>
+          </section>
+        </main>
       </div>
     </div>
     <script src="./js/script.min.js"></script>
