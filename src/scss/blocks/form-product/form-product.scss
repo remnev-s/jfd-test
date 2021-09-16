@@ -17,6 +17,23 @@
   &__label {
     @include label-text();
     margin-bottom: 0.4rem;
+    position: relative;
+
+    // добавили кружок ко всем label
+    &::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background-color: #ff8484;
+      border-radius: 50%;
+      top: -1px;
+    }
+    // убрали кружок на втором поле
+    &:nth-of-type(2)::after {
+      background-color: red;
+      content: none;
+    }
   }
 
   &__item {
