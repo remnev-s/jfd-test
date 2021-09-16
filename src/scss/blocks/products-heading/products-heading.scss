@@ -1,4 +1,6 @@
 @use 'helpers/color' as *;
+@use 'helpers/mixin' as *;
+@use 'helpers/variebles' as *;
 
 .products-heading {
   display: flex;
@@ -14,5 +16,21 @@
   }
 
   &__sort {
+    @include form-text();
+    border: none;
+    background-color: #fffefb;
+    padding: 1.2rem 2.8rem 1.1rem 1.6rem;
+    border-radius: $border-radius;
+    width: 12.1rem;
+    cursor: pointer;
+
+    background-image: url(../../../img/arrow-down-select.svg);
+    background-repeat: no-repeat;
+    background-position: right 1.5rem top 1.7rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    // display: block;
   }
 }
