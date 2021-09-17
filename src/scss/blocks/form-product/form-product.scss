@@ -65,10 +65,18 @@
 
   &__button {
     @include form-text();
+    color: #fff;
     border-radius: $border-radius;
     border: none;
-    background-color: #eeeeee;
+    // background-color: #eeeeee;
+    background-color: #7bae73;
     min-height: 3.6rem;
     cursor: pointer;
+    &_disabled {
+      background-color: #eee;
+      color: #b4b4b4;
+
+      cursor: default;
+    }
   }
 }
