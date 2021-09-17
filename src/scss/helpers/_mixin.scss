@@ -1,0 +1,18 @@
+@mixin form-text() {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  color: #b4b4b4;
+}
+
+@mixin label-text() {
+  font-size: 1rem;
+  line-height: 1.3rem;
+  font-weight: 400;
+  color: #49485e;
+  letter-spacing: -0.02rem;
+}
+
+@mixin animation() {
+  transition: all 0.4s linear;
+}

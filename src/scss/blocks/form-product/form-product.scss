@@ -1,0 +1,82 @@
+@use 'helpers/variebles' as *;
+@use 'helpers/mixin' as *;
+@use 'helpers/color' as *;
+
+.form-product {
+  position: sticky;
+  top: 2.4rem;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 2.4rem;
+  box-shadow: $shadow;
+  background-color: $bg-form;
+  border-radius: $border-radius;
+
+  &__label {
+    @include label-text();
+    margin-bottom: 0.4rem;
+    position: relative;
+
+    // добавили кружок ко всем label
+    &::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background-color: #ff8484;
+      border-radius: 50%;
+      top: -1px;
+    }
+    // убрали кружок на втором поле
+    &:nth-of-type(2)::after {
+      background-color: red;
+      content: none;
+    }
+  }
+
+  &__item {
+    @include form-text();
+    box-shadow: $input-shadow;
+    border-radius: $border-radius;
+    background: #fffefb;
+
+    border: none;
+    padding: 1rem 1.1rem 1.6rem;
+    margin-bottom: 1.6rem;
+    outline: none;
+
+    &_el_main-text {
+      min-height: 10.8rem;
+      resize: none;
+    }
+
+    // скрывает стрелки у поля number
+    &-price::-webkit-inner-spin-button,
+    ::-webkit-inner-spin-button {
+      display: none;
+    }
+  }
+  // скрывает стрелки у поля number в firefox
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+
+  &__button {
+    @include form-text();
+    color: #fff;
+    border-radius: $border-radius;
+    border: none;
+    // background-color: #eeeeee;
+    background-color: #7bae73;
+    min-height: 3.6rem;
+    cursor: pointer;
+
+    &_disabled {
+      background-color: #eee;
+      color: #b4b4b4;
+      cursor: default;
+    }
+  }
+}

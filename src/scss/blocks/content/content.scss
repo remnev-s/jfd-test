@@ -1,0 +1,10 @@
+.content {
+  // outline: 1px solid blue;
+  display: grid;
+  grid-template-columns: 33.2rem 1fr;
+  gap: 16px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
