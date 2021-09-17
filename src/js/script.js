@@ -2,23 +2,18 @@
 const templateList = document.querySelector('.elements__list');
 const templateElement = document.querySelector('.template').content; //клон разметки
 
-const elementsPhoto = listElement.querySelector('.elements__list-photo');
-const elementsTitle = listElement.querySelector('.elements__title');
-const elementsDescription = listElement.querySelector('.elements__description');
-const elementsPrice = listElement.querySelector('.elements__price');
-
-const nameProductInput = document.querySelector('.form-product__item-name');
+const nameProductInput = document.querySelector('.form-product__item-name'); // переменная наименования товара
 const descriptionProductInput = document.querySelector(
   '.form-product__item-description'
 ); // переменная описание товара
-const linkImageInput = document.querySelector('.form-product__item-link');
-const priceInput = document.querySelector('.form-product__item-price');
+const linkImageInput = document.querySelector('.form-product__item-link'); // переменная ссылки картинки
+const priceInput = document.querySelector('.form-product__item-price'); // переменная цена товара
+const addButtonCard = document.querySelector('.form-product__button'); // кнопка добавить товар
 
-const form = document.querySelector('.form-product');
-const formname = document.forms.form;
 const addButton = document.querySelector('.form-product__button_action_add');
 
-/* -------------- Карточки при загрузки страницы ----------------------------- */
+const form = document.querySelector('.form-product');
+/* --------------ADD CARDS PAGE----------------------------- */
 const initialCards = [
   {
     name: 'Наименование товара',
@@ -64,12 +59,21 @@ const initialCards = [
   },
 ];
 
+/* ---------------------------------------------------------------------------- */
+
 function createCard(item) {
   const listElement = templateElement
     .querySelector('.elements__list-item')
     .cloneNode(true);
 
-  // добавляем данные в карточку
+  const elementsPhoto = listElement.querySelector('.elements__list-photo');
+  const elementsTitle = listElement.querySelector('.elements__title');
+  const elementsDescription = listElement.querySelector(
+    '.elements__description'
+  );
+  const elementsPrice = listElement.querySelector('.elements__price');
+
+  // добавляем данные из аргумента
   elementsPhoto.src = item.image;
   elementsTitle.textContent = item.name;
   elementsDescription.textContent = item.about;
@@ -113,7 +117,6 @@ function cardFormSubmitHandler(evt) {
 }
 form.addEventListener('submit', cardFormSubmitHandler);
 
-// Состояние кнопки
 function setSubmitButtonState(isFormValid) {
   if (isFormValid) {
     addButton.removeAttribute('disabled');
@@ -124,7 +127,7 @@ function setSubmitButtonState(isFormValid) {
   }
 }
 
-formname.addEventListener('input', function (evt) {
+form.addEventListener('input', function (evt) {
   const isValid =
     nameProductInput.value.length > 0 &&
     linkImageInput.value.length > 0 &&
