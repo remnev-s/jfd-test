@@ -11,8 +11,8 @@ const priceInput = document.querySelector('.form-product__item-price'); // пе�
 const addButtonCard = document.querySelector('.form-product__button'); // кнопка добавить товар
 
 const addButton = document.querySelector('.form-product__button_action_add');
-
-const form = document.querySelector('.form-product');
+// const form = document.querySelector('.form-product');
+const formname = document.forms.form;
 /* --------------ADD CARDS PAGE----------------------------- */
 const initialCards = [
   {
@@ -114,6 +114,8 @@ function cardFormSubmitHandler(evt) {
     templateList
   );
   document.querySelector('.form-product').reset();
+  formname.reset();
+  setSubmitButtonState(false);
 }
 form.addEventListener('submit', cardFormSubmitHandler);
 
@@ -127,13 +129,10 @@ function setSubmitButtonState(isFormValid) {
   }
 }
 
-form.addEventListener('input', function (evt) {
+formname.addEventListener('input', function (evt) {
   const isValid =
     nameProductInput.value.length > 0 &&
     linkImageInput.value.length > 0 &&
     priceInput.value.length > 0;
   setSubmitButtonState(isValid);
-
-  // form.reset();
-  // setSubmitButtonState(false);
 });
