@@ -53,7 +53,7 @@
     }
 
     // скрывает стрелки у поля number
-    &_price::-webkit-inner-spin-button,
+    &-price::-webkit-inner-spin-button,
     ::-webkit-inner-spin-button {
       display: none;
     }
