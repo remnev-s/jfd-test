@@ -20,42 +20,42 @@ const initialCards = [
     image: './img/product-img.jpg',
     about:
       'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк',
-    price: '10000 руб',
+    price: '10000',
   },
   {
     name: 'Наименование товара',
     image: './img/product-img.jpg',
     about:
       'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк',
-    price: '10000 руб',
+    price: '10000',
   },
   {
     name: 'Наименование товара',
     image: './img/product-img.jpg',
     about:
       'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк',
-    price: '10000 руб',
+    price: '10000',
   },
   {
     name: 'Наименование товара',
     image: './img/product-img.jpg',
     about:
       'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк',
-    price: '10000 руб',
+    price: '10000',
   },
   {
     name: 'Наименование товара',
     image: './img/product-img.jpg',
     about:
       'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк',
-    price: '10000 руб',
+    price: '10000',
   },
   {
     name: 'Наименование товара',
     image: './img/product-img.jpg',
     about:
       'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк',
-    price: '10000 руб',
+    price: '10000',
   },
 ];
 
@@ -77,7 +77,7 @@ function createCard(item) {
   elementsPhoto.src = item.image;
   elementsTitle.textContent = item.name;
   elementsDescription.textContent = item.about;
-  elementsPrice.textContent = item.price;
+  elementsPrice.textContent = item.price += ' руб';
 
   //обработчик на удаление карточки
   listElement
@@ -133,4 +133,7 @@ form.addEventListener('input', function (evt) {
     linkImageInput.value.length > 0 &&
     priceInput.value.length > 0;
   setSubmitButtonState(isValid);
+
+  // form.reset();
+  // setSubmitButtonState(false);
 });
