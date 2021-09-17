@@ -15,4 +15,4 @@
 ---
 
 **Посмотреть сайт можно по
-<a href="https://remnev-s.github.io/jfd-test/" target="_blank">ссылке</a>**
+<a href="http://ida.eurodir.ru" target="_blank">ссылке</a>**
