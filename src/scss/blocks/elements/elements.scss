@@ -54,8 +54,11 @@
   }
 
   &__description-wrapper {
+    display: flex;
+    flex-direction: column;
     padding: 1.6rem 1.6rem 2.4rem;
     color: $main-text-color;
+    min-height: 22.3rem;
   }
 
   &__title {
@@ -63,6 +66,10 @@
     line-height: 2.5rem;
     font-weight: 600;
     margin-bottom: 1.6rem;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
 
   &__description {
@@ -70,6 +77,9 @@
     line-height: 2rem;
     font-weight: 400;
     margin-bottom: 3.2rem;
+    flex: 1 1 auto;
+    overflow: hidden;
+    max-height: 8rem;
   }
 
   &__price {
