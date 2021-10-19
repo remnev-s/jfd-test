@@ -1,5 +1,3 @@
-# Тестовое задание
-
 ### IDA PROJECT
 
 ![github.com/remnev-s/shortly](src/img/screenshot.png)
