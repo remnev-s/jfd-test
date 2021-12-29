@@ -14,7 +14,7 @@ function browsersync() {
       baseDir: 'src/',
     },
     port: 8080,
-    browser: 'firefox',
+    browser: 'Google Chrome',
     notify: false,
   });
 }
