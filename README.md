@@ -4,7 +4,7 @@
 
 ---
 
-## Посмотреть сайт можно по <a href="https://jfd-test.surge.sh" target="_blank">ссылке</a>
+## Посмотреть сайт можно по <a href="jfd.surge.sh" target="_blank">ссылке</a>
 
 ---
 
