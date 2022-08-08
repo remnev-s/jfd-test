@@ -3,4 +3,7 @@
 
 .sidebar {
   min-width: 33.2rem;
+  @media (max-width: 380px) {
+    min-width: 28rem;
+  }
 }

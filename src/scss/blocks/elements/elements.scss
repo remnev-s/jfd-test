@@ -13,6 +13,10 @@
     gap: 16px;
     padding: 0;
     width: 100%;
+
+    @media (max-width: 320px) {
+      grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    }
   }
 
   &__list-item {
@@ -34,6 +38,9 @@
     height: 20rem;
     object-fit: cover;
     border-radius: 0.4rem 0.4rem 0 0;
+    @media (max-width: 320px) {
+      min-width: 3rem;
+    }
   }
 
   &__button-delete {
@@ -51,6 +58,12 @@
     // display: none;
     @include animation();
     opacity: 0;
+
+    @media (max-width: 380px) {
+      top: 1.5rem;
+      right: 1.5rem;
+      opacity: 1;
+    }
   }
 
   &__description-wrapper {
